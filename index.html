@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+
+    <title>Tracker Map</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            width: 100%;
+            height: 100vh;
+        }
+        #controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            z-index: 1000;
+        }
+        button {
+            margin: 5px;
+            padding: 8px;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        #timeline {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="map"></div>
+    <div id="controls">
+        <button id="playBtn">Play</button>
+        <input type="range" id="timeline" min="0" max="100" value="0" step="1">
+
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    
+    <!-- Tracking car -->
+    <script src="app.js"></script>
+</body>
+</html>
